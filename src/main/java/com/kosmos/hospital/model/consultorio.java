@@ -8,8 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "consultorios")
-public class consultorios {
+@Table(name = "consultorio")
+public class consultorio {
     /*
      * Consultorios (3 a 5 para el ejercicio, se pueden insertar manualmente)
      * • Numero de consultorio
@@ -17,31 +17,43 @@ public class consultorios {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "id_consultorio")
+    private int idConsultorio;
     private int numeroConsultorio;
     private int piso;
 
-    public consultorios(int numeroConsultorio, int piso) {
+    public consultorio(int numeroConsultorio, int piso) {
         this.numeroConsultorio = numeroConsultorio;
         this.piso = piso;
     }
 
-    public consultorios() {
+    public int getIdConsultorio() {
+        return this.idConsultorio;
+    }
+
+    public void setIdConsultorio(int idConsultorio) {
+        this.idConsultorio = idConsultorio;
     }
 
     public int getNumeroConsultorio() {
-        return numeroConsultorio;
-    }
-
-    public int getPiso() {
-        return piso;
+        return this.numeroConsultorio;
     }
 
     public void setNumeroConsultorio(int numeroConsultorio) {
         this.numeroConsultorio = numeroConsultorio;
     }
 
+    public int getPiso() {
+        return this.piso;
+    }
+
     public void setPiso(int piso) {
         this.piso = piso;
+    }
+
+    @Override
+    public String toString() {
+        return "consultorio [idConsultorio=" + idConsultorio + ", numeroConsultorio=" + numeroConsultorio + ", piso="
+                + piso + "]";
     }
 }

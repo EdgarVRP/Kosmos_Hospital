@@ -1,5 +1,14 @@
 package com.kosmos.hospital.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "empleado")
 public class empleado {
     /*
      * La aplicación debe tener registrada la siguiente información:
@@ -9,6 +18,10 @@ public class empleado {
      * • Apellido Materno
      * • Especialidad
      */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_empleado")
+    private int idEmpleado;
     private String nombre;
     private String apellidoPaterno;
     private String apellidoMaterno;

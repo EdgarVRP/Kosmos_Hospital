@@ -1,6 +1,5 @@
 package com.kosmos.hospital.model;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,13 +19,14 @@ public class citas {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
-    private consultorios consultorio;
+    @Column(name = "id_cita")
+    private int idCita;
+    private consultorio consultorio;
     private empleado doctor;
     private String horario;
     private String nombrePaciente;
 
-    public citas(consultorios consultorio, empleado doctor, String horario, String nombrePaciente) {
+    public citas(consultorio consultorio, empleado doctor, String horario, String nombrePaciente) {
         this.consultorio = consultorio;
         this.doctor = doctor;
         this.horario = horario;

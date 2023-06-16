@@ -2,6 +2,9 @@
 
  Evaluación Programador Java Web para KOSMOS
 
+Se incluye diagrama entidad relacion de la base de datos, tambien la query para la cracion de tablas, se debe crear un archivo "env.properties" para colocar las variables de entorno.
+
+
 INSTRUCCIONES
 
 Evaluación Programador Java Web
