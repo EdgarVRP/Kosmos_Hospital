@@ -20,7 +20,7 @@ public class consultorioService {
 
     // GET
 
-    public List<consultorio> getConsultorios(consultorioRepository consultoriosRepository) {
+    public List<consultorio> getConsultorios() {
         return consultoriosRepository.findAll();
     }
 

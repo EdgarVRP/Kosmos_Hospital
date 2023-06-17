@@ -18,7 +18,7 @@ public class empleadoService {
 
     // GET
 
-    public List<empleado> getEmpleados(empleadoRepository empleadoRepository) {
+    public List<empleado> getEmpleados() {
         return empleadoRepository.findAll();
     }
 
